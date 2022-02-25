@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --orange: #6B3F12;
+    --orangeb: #EEAF70;
+    --orangec: #EB8928;
+    --degrade:linear-gradient(90deg, var(--orangec),var(--orange));
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+*::selection{
+    background: var(--orangec);
+    color: white;
+}
+
+html{
+    font-size: 62%;
+}
+
+body{
+    background: whitesmoke;
+}
+
+
+
+section{
+    min-height: 100vh;
+    padding: 0, 9%;
+    padding-top: 7.5rem;
+    padding-bottom:  2rem;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow:  0 .5rem 1rem rgba(0, 0, 0, .1) ;
+    padding: 2rem 9%;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+header .logo{
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+header .logo span{
+    color: var(--orangec);
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--orange);
+}
+
+header .navbar a:hover{
+    color: var(--orangec);
+}
+
+#ACCUEIL{
+    color: var(--orangec);
+    padding-top: 100px;
+       
+}
+
+.ACCUEIL{
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    text-align: center;
+    position: relative;
+}
+
+.bouton{
+  border: 2px solid black;
+  font-size: 15px;
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--orange);
+  position: relative;
+  left: 10%;
+  top: 30rem;
+   
+}
+
+.mot{
+  border-radius: 50%;
+  top: 5%;
+  left: 0;
+  width: 7vw;
+  height: 7vw;
+  position: absolute;
+}
+
+.animation{     
+  animation: up-down 1s 7, to-green 5000ms ease;
+}
+
+.animation-wrraper{
+    animation-name: left-right;
+    animation-duration: 5s;
+}
+
+.wrraper-mot{
+    color: #6B3F12;
+    height: 7vw;
+    width: 7vw;
+}
+
+@keyframes up-down{
+    0%{ transform: translatey(0px) }
+    50%{ transform: translatey(300px) }
+    100%{ transform: translatey(0px) }
+  }
+
+@keyframes left-right{
+    0%{transform: translatex(20vw)}
+    50%{transform: translateX(90vw)}
+    70%{transform: translateX(30vw)}
+    100%{transform: translatex(90vw)}
+}
+
+@keyframes to-green {
+    0% {
+        background: #EB8928;
+    }
+
+    50% {
+        background: #EEAF70;
+    }
+
+    100% {
+        background: #6B3F12;
+    }
+}
+
+
+
+.wrapper{
+	display: flex;
+	width: 75vw;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+h2{
+    font-size: xx-large;
+}
+
+h1{
+    color: #6B3F12;
+    margin: 150px auto;
+    text-align: center;
+    font-size: xx-large;
+}
+
+p{
+    color: var(--orangec);
+    max-width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: xx-large;
+} 
+
+.GALERIE {
+	box-sizing: border-box;
+	
+	flex-basis: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30vh;
+	margin: 0;
+	font-size: 22px;
+}
+
+.un {
+    order: 5;
+	flex-basis: 50%;
+}
+
+.deux{
+    order: 4;
+	flex-basis: 50%;
+}
+
+.trois{
+    order: 3;
+	flex-basis:100%;
+}
+
+.quatre{
+    orphans:2;
+	flex-basis: 50%;
+}
+
+.cinq{
+    order: 1;
+	flex-basis: 50%;
+}
+
+footer {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color:#f7810b;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
